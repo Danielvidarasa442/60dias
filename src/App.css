@@ -36,15 +36,15 @@ header nav {
     align-items: center;
     justify-content: center;
     padding: 50px 20px;
-    flex-direction: column; /* Altera a direção para coluna em dispositivos móveis */
+    flex-direction: column;
 }
 
 .hero-content {
     max-width: 500px;
     margin: 20px;
-    display: flex; /* Transforma em Flexbox para alinhar os elementos */
+    display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center;
     text-align: center;
 }
 
@@ -58,11 +58,14 @@ header nav {
     margin-bottom: 30px;
 }
 
-/* Estilos para a imagem em desktops */
+/* Estilos para a imagem do e-book na seção hero */
+.hero-image-desktop {
+    margin-bottom: 20px; /* Adiciona espaçamento entre a imagem e o botão */
+}
 .hero-image-desktop img {
-    max-width: 400px;
+    max-width: 450px; /* Aumenta o tamanho da imagem */
+    width: 100%; /* Garante que ela seja responsiva */
     border-radius: 10px;
-    margin-bottom: 20px;
 }
 
 /* Estilos para a imagem em dispositivos móveis (oculta em desktop) */
@@ -70,7 +73,7 @@ header nav {
     display: none;
 }
 
-/* Oculta a imagem de desktop em telas menores */
+/* Media query para telas menores (smartphones) */
 @media (max-width: 768px) {
     .hero-image-desktop {
         display: none;
@@ -78,6 +81,7 @@ header nav {
     .hero-image-mobile {
         display: block;
         max-width: 300px;
+        margin: 0 auto 20px;
     }
 }
 
