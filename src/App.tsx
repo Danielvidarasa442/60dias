@@ -21,11 +21,11 @@ function App() {
           <div className="hero-content fade-in">
             <h2>Emagrecer em 60 Dias</h2>
             <p>Transforme seu corpo e sua vida com nosso método 100% natural.</p>
-            {/* Imagem acima do botão */}
+            {/* Imagem acima do botão em desktop */}
             <div className="hero-image-desktop">
                 <img src={ebookCapa} alt="Capa do eBook" />
             </div>
-            {/* Botão agora direciona para o link da Kiwify */}
+            {/* Botão para a Kiwify */}
             <a href={kiwifyLink} className="btn zoom" target="_blank" rel="noopener noreferrer">Comprar</a>
           </div>
           {/* A imagem original agora só aparece em dispositivos móveis */}
@@ -44,8 +44,7 @@ function App() {
             <li>Estratégias de emagrecimento eficazes</li>
             <li>Resultados reais em 60 dias</li>
           </ul>
-          {/* Botão agora direciona para o link da Kiwify */}
-          <a href={kiwifyLink} className="btn zoom" target="_blank" rel="noopener noreferrer">Comprar</a>
+          {/* O botão da seção de benefícios foi removido */}
         </section>
 
         <section className="detalhes fade-in">
