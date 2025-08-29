@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css'; 
-import ebookCapa from './assets/ebook-capa.jpg';
+import ebookCapa from './assets/ebook-capa.png';
 
 function App() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
