@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react'; // Corrigido o erro de compilação removendo 'React'
 import './App.css'; 
 import ebookCapa from './assets/ebook-capa.jpg';
 
@@ -16,19 +16,20 @@ function App() {
       <header>
         <nav>
           <h1>The Natural</h1>
+          {/* Adicione a imagem do e-book aqui no cabeçalho */}
+          <div className="header-ebook-image">
+            <img src={ebookCapa} alt="Capa do eBook" />
+          </div>
         </nav>
         <section className="hero">
           <div className="hero-content fade-in">
             <h2>Emagrecer em 60 Dias</h2>
             <p>Transforme seu corpo e sua vida com nosso método 100% natural.</p>
-            {/* Imagem acima do botão em desktop */}
             <div className="hero-image-desktop">
                 <img src={ebookCapa} alt="Capa do eBook" />
             </div>
-            {/* Botão para a Kiwify */}
             <a href={kiwifyLink} className="btn zoom" target="_blank" rel="noopener noreferrer">Comprar</a>
           </div>
-          {/* A imagem original agora só aparece em dispositivos móveis */}
           <div className="hero-image-mobile fade-in">
             <img src={ebookCapa} alt="Capa do eBook" />
           </div>
@@ -44,7 +45,6 @@ function App() {
             <li>Estratégias de emagrecimento eficazes</li>
             <li>Resultados reais em 60 dias</li>
           </ul>
-          {/* O botão da seção de benefícios foi removido */}
         </section>
 
         <section className="detalhes fade-in">
