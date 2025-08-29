@@ -83,6 +83,9 @@ header nav {
         max-width: 300px;
         margin: 0 auto 20px;
     }
+    .header-ebook-image {
+        display: none; 
+    }
 }
 
 .btn {
