@@ -17,7 +17,7 @@ body {
 .main-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Adiciona espaçamento nas laterais */
+    padding: 0 20px;
 }
 
 /* Header */
@@ -36,11 +36,16 @@ header nav {
     align-items: center;
     justify-content: center;
     padding: 50px 20px;
+    flex-direction: column; /* Altera a direção para coluna em dispositivos móveis */
 }
 
 .hero-content {
     max-width: 500px;
     margin: 20px;
+    display: flex; /* Transforma em Flexbox para alinhar os elementos */
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    text-align: center;
 }
 
 .hero-content h2 {
@@ -53,45 +58,27 @@ header nav {
     margin-bottom: 30px;
 }
 
-.hero-image img {
-    max-width: 400px; 
+/* Estilos para a imagem em desktops */
+.hero-image-desktop img {
+    max-width: 400px;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-/* Seções da página */
-section {
-    padding: 50px 20px;
-    text-align: center;
+/* Estilos para a imagem em dispositivos móveis (oculta em desktop) */
+.hero-image-mobile {
+    display: none;
 }
 
-.beneficios ul {
-    list-style: none;
-    margin: 20px 0;
-}
-
-.beneficios li {
-    margin-bottom: 15px;
-    font-size: 1.2em;
-}
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.card {
-    background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #ff9800;
+/* Oculta a imagem de desktop em telas menores */
+@media (max-width: 768px) {
+    .hero-image-desktop {
+        display: none;
+    }
+    .hero-image-mobile {
+        display: block;
+        max-width: 300px;
+    }
 }
 
 .btn {
@@ -131,7 +118,42 @@ section {
     }
 }
 
-/* FAQ */
+/* Seções da página */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.beneficios ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.beneficios li {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff9800;
+}
+
 .faq-item {
     margin: 15px 0;
     text-align: left;
