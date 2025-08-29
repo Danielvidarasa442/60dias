@@ -58,7 +58,7 @@ header nav {
     margin-bottom: 30px;
 }
 
-/* Estilos para a imagem na seção hero (desktop) */
+/* Estilos para a imagem na seção hero */
 .hero-image-desktop {
     margin-bottom: 20px;
 }
@@ -75,9 +75,11 @@ header nav {
 
 /* Media query para telas menores (smartphones) */
 @media (max-width: 768px) {
+    /* Oculta a imagem de desktop */
     .hero-image-desktop {
         display: none;
     }
+    /* Mostra a imagem de celular */
     .hero-image-mobile {
         display: block;
         max-width: 300px;
