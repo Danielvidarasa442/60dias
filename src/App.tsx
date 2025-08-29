@@ -1,4 +1,4 @@
-import { useState } from 'react'; // Corrigido o erro de compilação removendo 'React'
+import { useState } from 'react';
 import './App.css'; 
 import ebookCapa from './assets/ebook-capa.jpg';
 
@@ -16,15 +16,12 @@ function App() {
       <header>
         <nav>
           <h1>The Natural</h1>
-          {/* Adicione a imagem do e-book aqui no cabeçalho */}
-          <div className="header-ebook-image">
-            <img src={ebookCapa} alt="Capa do eBook" />
-          </div>
         </nav>
         <section className="hero">
           <div className="hero-content fade-in">
             <h2>Emagrecer em 60 Dias</h2>
             <p>Transforme seu corpo e sua vida com nosso método 100% natural.</p>
+            {/* A imagem do e-book está aqui, na seção hero */}
             <div className="hero-image-desktop">
                 <img src={ebookCapa} alt="Capa do eBook" />
             </div>
