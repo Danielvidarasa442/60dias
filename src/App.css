@@ -1,21 +1,32 @@
-/* ... (Seu CSS existente) ... */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #f5f5f5;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* O contêiner principal para centralizar e limitar a largura */
+.main-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 /* Header */
 header nav {
     padding: 20px;
+    text-align: center;
     background-color: #1a1a1a;
     font-size: 1.5em;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Adiciona espaço entre o título e a imagem */
-}
-
-/* Nova regra para a imagem no header */
-.header-ebook-image img {
-    max-width: 60px; /* Tamanho pequeno para o header */
-    border-radius: 5px;
 }
 
 /* Hero section */
@@ -64,9 +75,6 @@ header nav {
 
 /* Media query para telas menores (smartphones) */
 @media (max-width: 768px) {
-    .header-ebook-image {
-        display: none; /* Oculta a imagem do header em telas pequenas */
-    }
     .hero-image-desktop {
         display: none;
     }
