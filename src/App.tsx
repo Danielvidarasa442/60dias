@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import './App.css'; 
-import ebookCapa from './assets/ebook-capa.jpg';
+import React, { useState } from 'react';
+import './App.css';
+import ebookCapa from './assets/ebook-capa.png';
 
 function App() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -12,25 +12,23 @@ function App() {
   const kiwifyLink = "https://pay.kiwify.com.br/u7MsP18";
 
   return (
-    <div className="main-wrapper"> 
+    <div className="main-wrapper">
       <header>
         <nav>
           <h1>The Natural</h1>
         </nav>
         <section className="hero">
+          {/* Este contêiner agora vai centralizar tudo */}
           <div className="hero-content fade-in">
             <h2>Emagrecer em 60 Dias</h2>
             <p>Transforme seu corpo e sua vida com nosso método 100% natural.</p>
-            {/* A imagem que aparece no desktop */}
-            <div className="hero-image-desktop">
-                <img src={ebookCapa} alt="Capa do eBook" />
-            </div>
-            {/* A imagem que aparece no celular */}
-            <div className="hero-image-mobile fade-in">
+            {/* O elemento da imagem foi movido para cá */}
+            <div className="ebook-image">
                 <img src={ebookCapa} alt="Capa do eBook" />
             </div>
             <a href={kiwifyLink} className="btn zoom" target="_blank" rel="noopener noreferrer">Comprar</a>
           </div>
+          {/* A div .hero-image-mobile pode ser removida se você não precisar dela */}
         </section>
       </header>
 
