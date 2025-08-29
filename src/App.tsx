@@ -9,8 +9,9 @@ function App() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
+  const kiwifyLink = "https://pay.kiwify.com.br/u7MsP18";
+
   return (
-    // Adicione esta div aqui para envolver todo o conteúdo
     <div className="main-wrapper"> 
       <header>
         <nav>
@@ -20,9 +21,15 @@ function App() {
           <div className="hero-content fade-in">
             <h2>Emagrecer em 60 Dias</h2>
             <p>Transforme seu corpo e sua vida com nosso método 100% natural.</p>
-            <a href="#comprar" className="btn zoom">Comprar</a>
+            {/* Imagem acima do botão */}
+            <div className="hero-image-desktop">
+                <img src={ebookCapa} alt="Capa do eBook" />
+            </div>
+            {/* Botão agora direciona para o link da Kiwify */}
+            <a href={kiwifyLink} className="btn zoom" target="_blank" rel="noopener noreferrer">Comprar</a>
           </div>
-          <div className="hero-image fade-in">
+          {/* A imagem original agora só aparece em dispositivos móveis */}
+          <div className="hero-image-mobile fade-in">
             <img src={ebookCapa} alt="Capa do eBook" />
           </div>
         </section>
@@ -37,7 +44,8 @@ function App() {
             <li>Estratégias de emagrecimento eficazes</li>
             <li>Resultados reais em 60 dias</li>
           </ul>
-          <a href="https://pay.kiwify.com.br/u7MsP18" className="btn zoom">Comprar</a>
+          {/* Botão agora direciona para o link da Kiwify */}
+          <a href={kiwifyLink} className="btn zoom" target="_blank" rel="noopener noreferrer">Comprar</a>
         </section>
 
         <section className="detalhes fade-in">
@@ -95,7 +103,7 @@ function App() {
 
         <section id="comprar" className="comprar fade-in">
           <h3>Garanta já o seu!</h3>
-          <a href="https://pay.kiwify.com.br/u7MsP18" target="_blank" className="btn zoom">Comprar</a>
+          <a href={kiwifyLink} target="_blank" className="btn zoom" rel="noopener noreferrer">Comprar</a>
           <p>Pagamento seguro via cartão, Pix ou boleto. Entrega imediata do PDF após a compra.</p>
         </section>
       </main>
@@ -103,7 +111,7 @@ function App() {
       <footer>
         <p>© 2025 The Natural. Todos os direitos reservados.</p>
       </footer>
-    </div> // Feche a div aqui
+    </div>
   );
 }
 
