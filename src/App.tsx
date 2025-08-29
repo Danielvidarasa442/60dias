@@ -113,3 +113,25 @@ function App() {
 }
 
 export default App;
+// ... (imports e código de App.tsx)
+
+<section className="hero">
+    <div className="hero-content fade-in">
+        <h2>Emagrecer em 60 Dias</h2>
+        <p>Transforme seu corpo e sua vida com nosso método 100% natural.</p>
+        
+        {/* Este é o contêiner da imagem para celular */}
+        <div className="hero-image-mobile fade-in">
+            <img src={ebookCapa} alt="Capa do eBook" />
+        </div>
+        
+        <a href={kiwifyLink} className="btn zoom" target="_blank" rel="noopener noreferrer">Comprar</a>
+    </div>
+    
+    {/* Este é o contêiner da imagem para desktop */}
+    <div className="hero-image-desktop">
+        <img src={ebookCapa} alt="Capa do eBook" />
+    </div>
+</section>
+
+// ... (resto do seu código)
