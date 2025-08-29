@@ -21,14 +21,15 @@ function App() {
           <div className="hero-content fade-in">
             <h2>Emagrecer em 60 Dias</h2>
             <p>Transforme seu corpo e sua vida com nosso método 100% natural.</p>
-            {/* A imagem do e-book está aqui, na seção hero */}
+            {/* A imagem que aparece no desktop */}
             <div className="hero-image-desktop">
                 <img src={ebookCapa} alt="Capa do eBook" />
             </div>
+            {/* A imagem que aparece no celular */}
+            <div className="hero-image-mobile fade-in">
+                <img src={ebookCapa} alt="Capa do eBook" />
+            </div>
             <a href={kiwifyLink} className="btn zoom" target="_blank" rel="noopener noreferrer">Comprar</a>
-          </div>
-          <div className="hero-image-mobile fade-in">
-            <img src={ebookCapa} alt="Capa do eBook" />
           </div>
         </section>
       </header>
